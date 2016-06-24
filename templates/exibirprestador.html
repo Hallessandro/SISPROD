@@ -1,13 +1,5 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-    <h2>Dados do Prestador</h2>
-    <ul>
-    <li>Nome: {{ prestador.nome|upper }}</li>
-     <li>Telefone: {{ prestador.telefone.sigla|upper }}</li>
-    <li>E-mail: {{ prestador.telefone|upper }}</li>
-    <li>Data de nascimento: {{ prestador.dt_nasc|Dateformat }}</li>
-    <li>CPF: {{ prestador.cpf|upper }}</li>
-    <li>Cargo: {{ prestador.cargo|upper }}</li>
-    </ul>
+
 {% endblock %}
