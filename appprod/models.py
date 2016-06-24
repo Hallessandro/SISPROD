@@ -26,7 +26,7 @@ class Materia_prima(models.Model):
 
 class Etapa(models.Model):
     descricao = models.CharField("Descrição da etapa", max_length=150)
-    materia = models.ManyToManyField(Materia_prima, through=EtapaMateria)
+    materia = models.ManyToManyField(Materia_prima, through="EtapaMateria")
 
 class EtapaMateria(models.Model):
     etapa = models.ForeignKey(Etapa, on_delete=models.PROTECT)
