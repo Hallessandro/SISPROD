@@ -68,6 +68,6 @@ processo1 = Processo_producao(dt_inicio='2016-01-01',dt_fim='2016-01-20',descric
 processo2 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-20',descricao='pronto para consumo',etapas=etapa3)
 processo3 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-10',descricao='pronto para consumo',etapas=etapa3)
 
-prestator1.save()
-prestator2.save()
-prestator3.save()
+processo1.save()
+processo2.save()
+processo3.save()
