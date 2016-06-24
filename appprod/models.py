@@ -39,4 +39,3 @@ class Processo_producao(models.Model):
     descricao = models.CharField("Descrição do processo", max_length=255)
     prestadores = models.ManyToManyField(Prestador_servico)
     etapas = models.ForeignKey(Etapa, on_delete=models.PROTECT)
-    
