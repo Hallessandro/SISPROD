@@ -7,8 +7,10 @@ def home(request):
     return render(request,'base.html')
 
 def exibirPrestador(request,id):
-        prestador = Prestador_servico.objects.get(id=id())
+        prestador = Prestador_servico.objects.order_by('nome')
+        lista = {'prestador':prestador}
         return render(request, 'exibirprestador.html', {'prestador': prestador})
+
 
 
 
