@@ -49,12 +49,12 @@ etapa2.save()
 etapa3.save()
 
 
-etapamateria1 = EtapaMateria(etapa=etapa1,materia=materia1,qtdUsada=10)
-etapamateria2 = EtapaMateria(etapa=etapa1,materia=materia2,qtdUsada=20)
+etapamateria1 = EtapaMateria(etapa=etapa1,materia=materia1,qtdUsada=8)
+etapamateria2 = EtapaMateria(etapa=etapa1,materia=materia2,qtdUsada=5)
 etapamateria3 = EtapaMateria(etapa=etapa1,materia=materia1,qtdUsada=12)
-etapamateria4 = EtapaMateria(etapa=etapa2,materia=materia3,qtdUsada=20)
-etapamateria5 = EtapaMateria(etapa=etapa2,materia=materia3,qtdUsada=29)
-etapamateria6 = EtapaMateria(etapa=etapa2,materia=materia4,qtdUsada=30)
+etapamateria4 = EtapaMateria(etapa=etapa2,materia=materia3,qtdUsada=10)
+etapamateria5 = EtapaMateria(etapa=etapa2,materia=materia3,qtdUsada=9)
+etapamateria6 = EtapaMateria(etapa=etapa2,materia=materia4,qtdUsada=8)
 
 etapamateria1.save()
 etapamateria2.save()
@@ -63,6 +63,7 @@ etapamateria4.save()
 etapamateria5.save()
 etapamateria6.save()
 
+#inserção de processo
 processo1 = Processo_producao(dt_inicio='2016-01-01',dt_fim='2016-01-20',descricao='pronto para consumo',etapas=etapa3)
 processo2 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-20',descricao='pronto para consumo',etapas=etapa3)
 processo3 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-10',descricao='pronto para consumo',etapas=etapa3)
