@@ -10,9 +10,9 @@ cargo1.save()
 cargo2.save()
 
 
-prestator1 =  Prestador_servico(nome='joão',telefone='91223-4432',email='joa@gmail.com',dt_nasc='1999/02/02',cpf='00033422333',cargo=cargo1)
-prestator2 =  Prestador_servico(nome='Monic',telefone='81223-4432',email='monic@gmail.com',dt_nasc='1993/06/30',cpf='10033422333',cargo=cargo1)
-prestator3 =  Prestador_servico(nome='Juliana',telefone='92023-4432',email='juli@gmail.com',dt_nasc='1997/03/02',cpf='12033422333',cargo=cargo2)
+prestator1 =  Prestador_servico(nome='João',telefone='91223-4432',email='joa@gmail.com',dt_nasc='1999-02-02',cpf='00033422333',cargo=cargo1)
+prestator2 =  Prestador_servico(nome='Monic',telefone='81223-4432',email='monic@gmail.com',dt_nasc='1993-06-30',cpf='10033422333',cargo=cargo1)
+prestator3 =  Prestador_servico(nome='Juliana',telefone='92023-4432',email='juli@gmail.com',dt_nasc='1997-03-02',cpf='12033422333',cargo=cargo2)
 
 prestator1.save()
 prestator2.save()
@@ -49,12 +49,12 @@ etapa2.save()
 etapa3.save()
 
 
-etapamateria1 = EtapaMateria(etapa=etapa1,materia=materia1)
-etapamateria2 = EtapaMateria(etapa=etapa1,materia=materia2)
-etapamateria3 = EtapaMateria(etapa=etapa1,materia=materia1)
-etapamateria4 = EtapaMateria(etapa=etapa2,materia=materia3)
-etapamateria5 = EtapaMateria(etapa=etapa2,materia=materia3)
-etapamateria6 = EtapaMateria(etapa=etapa2,materia=materia4)
+etapamateria1 = EtapaMateria(etapa=etapa1,materia=materia1, qtdUsada=3)
+etapamateria2 = EtapaMateria(etapa=etapa1,materia=materia2, qtdUsada=2)
+etapamateria3 = EtapaMateria(etapa=etapa1,materia=materia1, qtdUsada=4)
+etapamateria4 = EtapaMateria(etapa=etapa2,materia=materia3, qtdUsada=5)
+etapamateria5 = EtapaMateria(etapa=etapa2,materia=materia3, qtdUsada=2)
+etapamateria6 = EtapaMateria(etapa=etapa2,materia=materia4, qtdUsada=2)
 
 etapamateria1.save()
 etapamateria2.save()
