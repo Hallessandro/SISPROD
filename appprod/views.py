@@ -13,5 +13,5 @@ def exibirPrestador(request):
 
 def exibirMateriaPrima(request, descricao):
     materia = Materia_prima.objects.get(descricao=descricao)
-    return render(request, 'exibirMateria.html', {'materia': materia})
+    return render(request, 'exibirmateria.html', {'materia': materia})
 
