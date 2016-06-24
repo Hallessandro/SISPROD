@@ -28,10 +28,10 @@ unidade2.save()
 unidade3.save()
 
 
-materia1 = Materia_prima(descricao='banana',unidade=unidade1,quantidade=44,custo=200)
-materia2 = Materia_prima(descricao='peixe',unidade=unidade1,quantidade=50,custo=200)
-materia3 = Materia_prima(descricao='milho',unidade=unidade1,quantidade=10,custo=200)
-materia4 = Materia_prima(descricao='doce de goiaba',unidade=unidade2,quantidade=23,custo=200)
+materia1 = Materia_prima(descricao='banana',unidade=unidade1,quantidade=440,custo=200)
+materia2 = Materia_prima(descricao='peixe',unidade=unidade1,quantidade=500,custo=200)
+materia3 = Materia_prima(descricao='milho',unidade=unidade1,quantidade=110,custo=200)
+materia4 = Materia_prima(descricao='doce de goiaba',unidade=unidade2,quantidade=230,custo=200)
 
 materia1.save()
 materia2.save()
@@ -49,12 +49,12 @@ etapa2.save()
 etapa3.save()
 
 
-etapamateria1 = EtapaMateria(etapa=etapa1,materia=materia1)
-etapamateria2 = EtapaMateria(etapa=etapa1,materia=materia2)
-etapamateria3 = EtapaMateria(etapa=etapa1,materia=materia1)
-etapamateria4 = EtapaMateria(etapa=etapa2,materia=materia3)
-etapamateria5 = EtapaMateria(etapa=etapa2,materia=materia3)
-etapamateria6 = EtapaMateria(etapa=etapa2,materia=materia4)
+etapamateria1 = EtapaMateria(etapa=etapa1,materia=materia1,qtdUsada=10)
+etapamateria2 = EtapaMateria(etapa=etapa1,materia=materia2,qtdUsada=20)
+etapamateria3 = EtapaMateria(etapa=etapa1,materia=materia1,qtdUsada=12)
+etapamateria4 = EtapaMateria(etapa=etapa2,materia=materia3,qtdUsada=20)
+etapamateria5 = EtapaMateria(etapa=etapa2,materia=materia3,qtdUsada=29)
+etapamateria6 = EtapaMateria(etapa=etapa2,materia=materia4,qtdUsada=30)
 
 etapamateria1.save()
 etapamateria2.save()
