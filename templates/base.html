@@ -9,6 +9,15 @@
         }
     </style>
 </head>
+<body>
+    <h2>Gestão Simplificada de Unidades Produtivas</h2>
+    <nav>
+        <a href="{% url 'prestador' %}"> Prestador </a><br>
+        <a href="{% url 'materias' %}"> Materias Primas</a>
 
+    </nav>
+    {% block conteudo %}
+        <h3>Bem vindo ao sistema de controle de vendas</h3>
+    {% endblock %}
 </body>
 </html>
