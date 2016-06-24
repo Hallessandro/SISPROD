@@ -6,6 +6,9 @@ class Cargo(models.Model):
     descricao = models.CharField("Descrição do cargo", max_length=150)
     salario = models.FloatField("Salário")
 
+    def __str__(self):
+        return self.descricao
+
 class Prestador_servico(models.Model):
     nome = models.CharField("Nome", max_length=150)
     telefone = models.CharField("Telefone", max_length=10)
@@ -14,9 +17,15 @@ class Prestador_servico(models.Model):
     cpf = models.CharField("CPF", max_length=11)
     cargo = models.ForeignKey(Cargo, on_delete=models.PROTECT, verbose_name="Cargo")
 
+    def __str__(self):
+        return self.nome
+
 class Unidade_medida(models.Model):
     sigla = models.CharField("Sigla", max_length=2)
     descricao = models.CharField("Descrição", max_length=150)
+
+    def __str__(self):
+        return self.sigla
 
 class Materia_prima(models.Model):
     descricao = models.CharField("Descrição do produto", max_length=150)
@@ -24,14 +33,23 @@ class Materia_prima(models.Model):
     quantidade = models.IntegerField("Quantidade em estoque")
     custo = models.FloatField("Preço de aquisição")
 
+    def __str__(self):
+        return self.descricao
+
 class Etapa(models.Model):
     descricao = models.CharField("Descrição da etapa", max_length=150)
     materia = models.ManyToManyField(Materia_prima, through="EtapaMateria")
+
+    def __str__(self):
+        return self.descricao
 
 class EtapaMateria(models.Model):
     etapa = models.ForeignKey(Etapa, on_delete=models.PROTECT)
     materia = models.ForeignKey(Materia_prima, on_delete=models.PROTECT)
     qtdUsada = models.IntegerField("Quantidade de materia usada")
+
+    def __str__(self):
+        return self.etapa
 
 class Processo_producao(models.Model):
     dt_inicio = models.DateField("Data de inicio")
@@ -39,3 +57,6 @@ class Processo_producao(models.Model):
     descricao = models.CharField("Descrição do processo", max_length=255)
     prestadores = models.ManyToManyField(Prestador_servico)
     etapas = models.ForeignKey(Etapa, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.descricao
