@@ -7,8 +7,15 @@ procedimento: Para cada Matéria Prima utilizada, calcule o subtotal, que é a
 quantidade utilizada X o custo de aquisição. O somatório desse subtotais
 gera o valor total. (Valor 1,0)'''
 
-for e in Processo_producao.objects.all():
-    for a in e.prestadores.all():
-        print(a)
+for ps in Processo_producao.objects.all():
+    print(ps.descricao)
+    for pp in ps.prestadores.all():
+        print('prestadores de serviço '+pp.nome)
+    print('Etapa da produção ' +ps.etapas.descricao)
+    for ma in ps.etapas.etapamateria_set.all():
+        s=0
+        s+=ma.qtdUsada
+    print(s)
+
 
 
