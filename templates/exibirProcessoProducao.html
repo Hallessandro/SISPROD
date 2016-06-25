@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h2>Processo de Produção</h2>
+<table>
+  <tr>
+    <th>Descrição</th>
+      <th>Data de inicio</th>
+      <th>Data de fim</th>
+      <th>Prestadores de Serviço</th>
+      <th>Etapas</th>
+  </tr>
+    {% for pp in processo %}
+        <tr>
+            <td>{{ pp.descricao }}</td>
+            <td>{{ pp.dt_inicio }}</td>
+            <td>{{ pp.dt_fim }}</td>
+            <td>{{ pp.prestadores }}</td>
+            <td>{{ pp.etapas }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

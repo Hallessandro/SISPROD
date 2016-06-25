@@ -13,3 +13,7 @@ def exibirPrestador(request):
 def exibirMateria(request):
         materia = Materia_prima.objects.all().order_by('descricao')
         return render(request,'exibirMateriaPrima.html', {'materia':materia})
+
+def exibirProcesso(request):
+    processo = Processo_producao.objects.all().order_by('descricao')
+    return render(request, 'exibirProcessoProducao.html', {'processo': processo})
