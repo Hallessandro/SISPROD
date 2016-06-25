@@ -6,14 +6,10 @@ from appprod.models import *
 def home(request):
     return render(request,'base.html')
 
-def exibirPrestador(request,id):
-        prestador = Prestador_servico.objects.order_by('nome')
-        lista = {'prestador':prestador}
-        return render(request, 'exibirprestador.html', {'prestador': prestador})
+def exibirPrestador(request):
+        prestador = Prestador_servico.objects.all().order_by('nome')
+        return render(request,'exibirprestador.html', {'prestador':prestador})
 
-
-
-
-
-
-###########
+def exibirMateria(request):
+        materia = Materia_prima.objects.all().order_by('descricao')
+        return render(request,'exibirMateriaPrima.html', {'materia':materia})

@@ -3,10 +3,7 @@ from appprod.views import *
 
 urlpatterns=[
     url(r'^$',home,name='home'),
-    url(r'^produtos/$',exibirPrestador,name='produtos'),
-    url(r'^materias/$',exibirPrestador,name='materias'),
-
+    url(r'^prestador/$',exibirPrestador,name='prestador'),
+    url(r'^materia/$',exibirMateria,name='materia')
 ]
 
-
-#############3

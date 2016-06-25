@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-
-
+<h2>Prestadores de Serviço</h2>
+<table>
+  <tr>
+    <th>Nome</th>
+      <th>CPF</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Data de Nascimento</th>
+      <th>Cargo</th>
+  </tr>
+    {% for p in prestador %}
+        <tr>
+            <td>{{ p.nome }}</td>
+            <td>{{ p.cpf }}</td>
+            <td>{{ p.telefone }}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.dt_nasc }}</td>
+            <td>{{ p.cargo }}</td>
+        </tr>
+    {% endfor %}
+</table>
 {% endblock %}
