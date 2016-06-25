@@ -64,10 +64,19 @@ etapamateria5.save()
 etapamateria6.save()
 
 #inserção de processo
-processo1 = Processo_producao(dt_inicio='2016-01-01',dt_fim='2016-01-20',descricao='pronto para consumo',etapas=etapa3)
-processo2 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-20',descricao='pronto para consumo',etapas=etapa3)
-processo3 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-10',descricao='pronto para consumo',etapas=etapa3)
+processo1 = Processo_producao(dt_inicio='2016-01-01',dt_fim='2016-01-20',descricao='manteiga da terra',etapas=etapa3)
+processo2 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-20',descricao='queijo branco',etapas=etapa2)
+processo3 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-10',descricao='salada de fruta',etapas=etapa3)
 
 processo1.save()
 processo2.save()
 processo3.save()
+
+processo1.prestadores.add(prestator3)
+processo2.prestadores.add(prestator1)
+processo3.prestadores.add(prestator1)
+processo3.prestadores.add(prestator2)
+
+
+
+
