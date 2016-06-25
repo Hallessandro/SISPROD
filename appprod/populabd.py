@@ -3,35 +3,37 @@ from django.db import transaction,IntegrityError
 from appprod.models import Cargo, Prestador_servico, Unidade_medida, Materia_prima, Etapa, EtapaMateria, \
     Processo_producao
 
-cargo1 = Cargo(descricao='vendedor',salario=880)
-cargo2 = Cargo(descricao='produtor',salario=1180)
+cargo1 = Cargo(descricao='Lorde Comandante',salario=880)
+cargo2 = Cargo(descricao='Estagiário do Corvo de 3 olhos',salario=1180)
+cargo3 = Cargo(descricao='Mão da Rainha Daenerys',salario=880)
 
 cargo1.save()
 cargo2.save()
+cargo3.save()
 
 
-prestator1 =  Prestador_servico(nome='João',telefone='91223-4432',email='joa@gmail.com',dt_nasc='1997-01-01',cpf='00033422333',cargo=cargo1)
-prestator2 =  Prestador_servico(nome='Monic',telefone='81223-4432',email='monic@gmail.com',dt_nasc='1993-06-30',cpf='10033422333',cargo=cargo1)
-prestator3 =  Prestador_servico(nome='Juliana',telefone='92023-4432',email='juli@gmail.com',dt_nasc='1997-03-02',cpf='12033422333',cargo=cargo2)
+prestator1 =  Prestador_servico(nome='Jon Snow',telefone='91223-4432',email='jon_knownothing@gmail.com',dt_nasc='1997-01-01',cpf='00033422333',cargo=cargo1)
+prestator2 =  Prestador_servico(nome='Bran Stark',telefone='81223-4432',email='bran@gmail.com',dt_nasc='1993-06-30',cpf='10033422333',cargo=cargo2)
+prestator3 =  Prestador_servico(nome='Tyrion Lannister',telefone='92023-4432',email='Tyrion@gmail.com',dt_nasc='1997-03-02',cpf='12033422333',cargo=cargo3)
 
 prestator1.save()
 prestator2.save()
 prestator3.save()
 
 
-unidade1 = Unidade_medida(sigla='kg',descricao='kilograma')
-unidade2 = Unidade_medida(sigla='g',descricao='grama')
-unidade3 = Unidade_medida(sigla='ml',descricao='miligrama')
+unidade1 = Unidade_medida(sigla='KG',descricao='Kilograma')
+unidade2 = Unidade_medida(sigla='G',descricao='Grama')
+unidade3 = Unidade_medida(sigla='ML',descricao='Miligrama')
 
 unidade1.save()
 unidade2.save()
 unidade3.save()
 
 
-materia1 = Materia_prima(descricao='banana',unidade=unidade1,quantidade=440,custo=200)
-materia2 = Materia_prima(descricao='peixe',unidade=unidade1,quantidade=500,custo=200)
-materia3 = Materia_prima(descricao='milho',unidade=unidade1,quantidade=110,custo=200)
-materia4 = Materia_prima(descricao='doce de goiaba',unidade=unidade2,quantidade=230,custo=200)
+materia1 = Materia_prima(descricao='Banana',unidade=unidade1,quantidade=440,custo=200)
+materia2 = Materia_prima(descricao='Peixe',unidade=unidade1,quantidade=500,custo=200)
+materia3 = Materia_prima(descricao='Milho',unidade=unidade1,quantidade=110,custo=200)
+materia4 = Materia_prima(descricao='Queijo',unidade=unidade2,quantidade=230,custo=200)
 
 materia1.save()
 materia2.save()
@@ -40,8 +42,8 @@ materia4.save()
 
 
 etapa1=Etapa(descricao='Avaliando estoque de produtos')
-etapa2=Etapa(descricao='preparando produtos')
-etapa3=Etapa(descricao='produtos pronto')
+etapa2=Etapa(descricao='Preparando produtos')
+etapa3=Etapa(descricao='Produtos pronto')
 
 
 etapa1.save()
@@ -64,9 +66,9 @@ etapamateria5.save()
 etapamateria6.save()
 
 #inserção de processo
-processo1 = Processo_producao(dt_inicio='2016-01-01',dt_fim='2016-01-20',descricao='pronto para consumo',etapas=etapa3)
-processo2 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-20',descricao='pronto para consumo',etapas=etapa3)
-processo3 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-10',descricao='pronto para consumo',etapas=etapa3)
+processo1 = Processo_producao(dt_inicio='2016-01-01',dt_fim='2016-01-20',descricao='Pronto para consumo',etapas=etapa3)
+processo2 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-20',descricao='Pronto para consumo',etapas=etapa3)
+processo3 = Processo_producao(dt_inicio='2016-02-01',dt_fim='2016-02-10',descricao='Pronto para consumo',etapas=etapa3)
 
 processo1.save()
 processo2.save()
